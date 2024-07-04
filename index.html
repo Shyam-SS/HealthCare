@@ -218,7 +218,7 @@
                         <!--details-->
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem ullam perspiciatis impedit consequuntur</p>
                         <!--read more-->
-                        <a href="#">Check</a>
+                        <a href="model1.html" target="_blank">Check</a>
                     </div>
                     </div><!--slide-end-->
                     <!--**1*******-->
@@ -721,6 +721,19 @@
         },
       });
     </script>
+    <script>
+        window.watsonAssistantChatOptions = {
+          integrationID: "fa13ae0b-8c99-4106-a97c-68c39fc823be", // The ID of this integration.
+          region: "us-south", // The region your integration is hosted in.
+          serviceInstanceID: "a82827ce-f435-4790-a926-65093b27226d", // The ID of your service instance.
+          onLoad: async (instance) => { await instance.render(); }
+        };
+        setTimeout(function(){
+          const t=document.createElement('script');
+          t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+          document.head.appendChild(t);
+        });
+      </script>
 
 </body>
 </html>
